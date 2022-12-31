@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+.gridlines {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+
+.grid-horizontal {
+    position: absolute;
+    width: 100vw;
+    height: 4px;
+    background-color: red;
+}
+
+.grid-vertical {
+    position: absolute;
+    height: 100vh;
+    width: 4px;
+    background-color: red;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    /* background-color: green; */
+    animation: rotate_full 10s linear infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-outlined {
+    position: absolute;
+    border: 4px solid transparent;
+    border-top: 4px solid yellow;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#multi-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-wrapper {
+    position: absolute;
+    /* background-color: red; */
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-wrapper .circle-outlined {
+    border: 4px solid transparent;
+    border-right: 4px solid yellow;
+    animation: rotate_inverse 5s linear infinite;
+}
+
+.circle-outlined::before {
+    content: '';
+    position: absolute;
+    top: calc(14.64% - 7px);
+    right: calc(14.64% - 9px);
+
+    width: 15px;
+    height: 15px;
+    
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 0 0 5px #ff000033,
+        0 0 0 10px #ff000022,
+        0 0 0 15px #ff000011;
+}
+
+@keyframes rotate_full {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate_inverse {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
