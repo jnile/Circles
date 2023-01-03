@@ -10,12 +10,30 @@
             <div class="grid-horizontal"></div>
             <div class="grid-vertical"></div>
         </div>
+        <div class="menu">
+            <h1 id="menu-title">Circles</h1>
+            <table id="options-table">
+                <tr>
+                    <th>Number of Circles:</th>
+                    <td><input type="range" id="no_of_circles" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <th>Circle Radius:</th>
+                    <td><input type="range" id="circle_radius" min="1" max="500"></td>
+                </tr>
+                <tr>
+                    <th>Spin Radius:</th>
+                    <td><input type="range" id="spin_radius" min="1" max="400"></td>
+                </tr>
+                <tr>
+                    <th>Spin Speed:</th>
+                    <td><input type="range" id="spin_speed" min="0.1" max="60" step="0.1"></td>
+                </tr>
+            </table>
+        </div>
         <div class="wrapper">
-            <div class="container">
-                <div class="circle-outlined" style="width: 350px; height: 350px;">
-                    <div id="multi-circles"></div>
-                    <div class="circle-outlined" style="width: 150px; height: 150px;"></div>
-                </div>
+            <div class="container" id="container">
+                <div id="multi-circles"></div>
             </div>
         </div>
         <script src="./home.js"></script>
