@@ -60,4 +60,4 @@ function OnChangeSpinSpeed(e) {
     container_div.style.animation = `rotate_full ${spin_speed}s linear infinite`;
 }
 
-createMultipleCircles(10);
+createMultipleCircles();
